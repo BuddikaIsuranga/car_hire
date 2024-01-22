@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="519.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CustomerFormController">
+   <children>
+      <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id :" wrappingWidth="75.73675537109375" />
+      <TextField fx:id="txtCustId" layoutX="90.0" layoutY="14.0" prefHeight="26.0" prefWidth="58.0" />
+      <Button layoutX="151.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnCustSearchOnAction" text="Search" />
+      <Text layoutX="14.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name :" wrappingWidth="75.73675537109375" />
+      <TextField fx:id="txtUserName" layoutX="92.0" layoutY="52.0" prefHeight="26.0" prefWidth="106.0" />
+      <Button layoutX="13.0" layoutY="478.0" mnemonicParsing="false" onAction="#btnCustClearOnAction" prefHeight="26.0" prefWidth="76.0" text="Clear" />
+      <Button layoutX="14.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnCustSaveOnAction" prefHeight="26.0" prefWidth="58.0" text="Save" />
+      <Button layoutX="84.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnCustUpdateOnAction" prefHeight="26.0" prefWidth="58.0" text="Update" />
+      <Button layoutX="148.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnCustDeleteOnAction" prefHeight="26.0" prefWidth="58.0" text="Delete" />
+      <Label layoutX="16.0" layoutY="115.0" text="First Name:" />
+      <Label layoutX="17.0" layoutY="147.0" text="Last Name:" />
+      <Label layoutX="17.0" layoutY="204.0" text="Street:" />
+      <Label layoutX="15.0" layoutY="233.0" text="City:" />
+      <Label layoutX="15.0" layoutY="265.0" text="District:" />
+      <Label layoutX="14.0" layoutY="295.0" text="Postal Code:" />
+      <Label layoutX="18.0" layoutY="343.0" text="E- Mail:" />
+      <Label layoutX="17.0" layoutY="378.0" text="Contect:" />
+      <Label layoutX="17.0" layoutY="88.0" text="Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="88.4000244140625" layoutX="114.0" layoutY="87.0" opacity="0.23" startX="-100.0" />
+      <TextField fx:id="txtFName" layoutX="82.0" layoutY="111.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextField fx:id="txtLName" layoutX="82.0" layoutY="143.0" prefHeight="26.0" prefWidth="118.0" />
+      <Line endX="85.20001220703125" endY="-1.52587890625E-5" layoutX="114.0" layoutY="179.0" opacity="0.23" startX="-100.0" />
+      <Label layoutX="16.0" layoutY="180.0" text="Address">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStreet" layoutX="91.0" layoutY="200.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="txtCity" layoutX="92.0" layoutY="229.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="txtDistrict" layoutX="92.0" layoutY="261.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="txtPostCode" layoutX="92.0" layoutY="291.0" prefHeight="26.0" prefWidth="106.0" />
+      <Label layoutX="17.0" layoutY="324.0" text="Contact">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtEmail" layoutX="92.0" layoutY="339.0" prefHeight="26.0" prefWidth="106.0" />
+      <TextField fx:id="txtContact" layoutX="92.0" layoutY="374.0" prefHeight="26.0" prefWidth="106.0" />
+      <TableView fx:id="custTable" layoutX="218.0" layoutY="13.0" prefHeight="498.0" prefWidth="515.0">
+         <columns>
+            <TableColumn fx:id="tbCustId" prefWidth="45.0" text="Cust Id" />
+            <TableColumn fx:id="tbUName" prefWidth="68.0" text="User Name" />
+            <TableColumn fx:id="tbFName" prefWidth="53.0" text="F Name" />
+            <TableColumn fx:id="tbLName" prefWidth="50.0" text="L Name" />
+            <TableColumn fx:id="tbStreet" prefWidth="41.0" text="Street" />
+            <TableColumn fx:id="tbCity" prefWidth="40.0" text="City" />
+            <TableColumn fx:id="tbDistrict" minWidth="0.0" prefWidth="54.0" text="District" />
+            <TableColumn fx:id="tbPCode" prefWidth="48.0" text="P Code" />
+            <TableColumn fx:id="tbEMail" prefWidth="56.800048828125" text="Email" />
+            <TableColumn fx:id="tbContact" prefWidth="56.800048828125" text="Contact" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

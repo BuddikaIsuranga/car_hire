@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="519.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RentFormController">
+   <children>
+      <AnchorPane fx:id="rootRent" layoutX="10.0" layoutY="10.0" prefHeight="438.0" prefWidth="747.0">
+         <children>
+            <Label layoutX="11.0" layoutY="198.0" prefHeight="17.0" prefWidth="78.0" text="Start Date:" />
+            <Label layoutX="11.0" layoutY="231.0" prefHeight="17.0" prefWidth="72.0" text="End Date:" />
+            <TableView fx:id="rentTable" layoutX="279.0" layoutY="50.0" prefHeight="318.0" prefWidth="450.0">
+               <columns>
+                  <TableColumn fx:id="colRentId" prefWidth="55.0" text="ID" />
+                  <TableColumn fx:id="colSDate" prefWidth="98.0" text="Start Date" />
+                  <TableColumn fx:id="colEDate" prefWidth="98.0" text="End Date" />
+                  <TableColumn fx:id="colAddPay" minWidth="0.0" prefWidth="106.39996337890625" text="Advanced" />
+                  <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="129.60009765625" text="Total" />
+               </columns>
+            </TableView>
+            <Button layoutX="6.0" layoutY="376.0" mnemonicParsing="false" onAction="#btnAddRentOnAction" prefHeight="39.0" prefWidth="254.0" text="Add">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="636.0" layoutY="376.0" mnemonicParsing="false" onAction="#btnPlaceOrder" prefHeight="26.0" prefWidth="91.0" text="Rent" />
+            <Label layoutX="11.0" layoutY="20.0" text="Rental Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="346.0" prefHeight="17.0" prefWidth="139.0" text="Advanced Payment:" />
+            <TextField fx:id="txtAdavancePay" layoutX="156.0" layoutY="342.0" onKeyReleased="#advancedPaymentOnKeyReleased" prefHeight="25.0" prefWidth="104.0" />
+            <TextField fx:id="txtRentId" layoutX="109.0" layoutY="50.0" onAction="#txtRentIdOnActoin" prefHeight="25.0" prefWidth="151.0" promptText="R001" />
+            <Label layoutX="13.0" layoutY="54.0" text="Rent Id:" />
+            <Label layoutX="12.0" layoutY="159.0" prefHeight="17.0" prefWidth="96.0" text="Rate Per Day:" />
+            <TextField fx:id="txtRentRatePerDay" editable="false" focusTraversable="false" layoutX="109.0" layoutY="155.0" prefHeight="25.0" prefWidth="151.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TextField>
+            <Label layoutX="12.0" layoutY="269.0" text="Total Amount:" />
+            <Label layoutX="14.0" layoutY="301.0" text="Due Amount:" />
+            <Label fx:id="lblTotal" layoutX="172.0" layoutY="269.0" prefHeight="16.0" prefWidth="86.0" text="0.00" />
+            <Label fx:id="lblDueAmount" layoutX="171.0" layoutY="301.0" prefHeight="16.0" prefWidth="86.0" text="0.00" />
+            <Label layoutX="11.0" layoutY="122.0" text="Car Id:" />
+            <Label layoutX="11.0" layoutY="87.0" text="Customer Id:" />
+            <ComboBox fx:id="comboCarId" layoutX="109.0" layoutY="118.0" onAction="#cmbCarIdOnAction" prefHeight="25.0" prefWidth="151.0" promptText="Select Car" />
+            <ComboBox fx:id="comboCustId" layoutX="109.0" layoutY="83.0" onAction="#btnComboCustId" prefHeight="25.0" prefWidth="151.0" promptText="C001" />
+            <DatePicker fx:id="datePickerStartDate" editable="false" layoutX="109.0" layoutY="192.0" prefHeight="24.0" prefWidth="151.0" promptText="Select start date">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <DatePicker fx:id="datePickerEndDate" editable="false" layoutX="109.0" layoutY="226.0" onAction="#datePickerEndDateOnAction" prefHeight="24.0" prefWidth="151.0" promptText="Select end date">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </DatePicker>
+            <Separator layoutX="8.0" layoutY="257.0" prefHeight="0.0" prefWidth="254.0" />
+            <Label layoutX="279.0" layoutY="20.0" text="Rent Table">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="268.0" layoutY="2.0" orientation="VERTICAL" prefHeight="432.0" prefWidth="4.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

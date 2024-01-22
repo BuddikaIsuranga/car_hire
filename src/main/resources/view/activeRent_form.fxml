@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="519.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ActiveRentFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="438.0" prefWidth="725.0">
+         <children>
+            <TableView fx:id="tblRent" layoutY="116.0" onMouseClicked="#tblRentOnMouseClicked" prefHeight="316.0" prefWidth="719.0">
+               <columns>
+                  <TableColumn fx:id="colRentID" prefWidth="75.0" text="Rent ID" />
+                  <TableColumn fx:id="colCustomerID" prefWidth="123.0" text="Customer ID" />
+                  <TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+                  <TableColumn fx:id="colCarId" prefWidth="119.0" text="Car ID" />
+                  <TableColumn fx:id="colTotal" prefWidth="96.0" text="Total" />
+                  <TableColumn fx:id="colStartingDate" prefWidth="90.400146484375" text="Starting Date" />
+                  <TableColumn fx:id="colEndingDate" prefWidth="143.1998291015625" text="Ending Date" />
+               </columns>
+            </TableView>
+            <Label layoutX="22.0" layoutY="34.0" prefHeight="72.0" prefWidth="190.0" text="Active Rent List">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCustomerID" layoutX="549.0" layoutY="70.0" onKeyReleased="#txtCustomerIdOnKeyReleased" prefHeight="26.0" prefWidth="154.0" promptText="Search by Customer ID" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

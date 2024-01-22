@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="519.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.CarsFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="519.0" prefWidth="741.0">
+         <children>
+            <TableView fx:id="carTabel" layoutX="226.0" layoutY="4.0" prefHeight="510.0" prefWidth="512.0">
+               <columns>
+                  <TableColumn fx:id="tbCarId" prefWidth="61.5999755859375" text="Car Id" />
+                  <TableColumn fx:id="tbNumber" prefWidth="88.79998779296875" text="Number" />
+                  <TableColumn fx:id="tbBrand" prefWidth="81.5999755859375" text="Brand" />
+                  <TableColumn fx:id="tbModel" prefWidth="88.00009155273438" text="Model" />
+                  <TableColumn fx:id="tbYear" prefWidth="100.0" text="Year" />
+                  <TableColumn fx:id="tbRate" prefWidth="93.59991455078125" text="Rate" />
+               </columns>
+            </TableView>
+            <Text layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Id :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtCarId" layoutX="90.0" layoutY="14.0" onAction="#btnCarIdOnAction" prefHeight="26.0" prefWidth="58.0" />
+            <Button layoutX="162.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnSesrchOnAction" text="Search" />
+            <Text layoutX="16.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car Number :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtCarNum" layoutX="92.0" layoutY="65.0" prefHeight="26.0" prefWidth="130.0" />
+            <Text layoutX="16.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brand :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtBrand" layoutX="92.0" layoutY="102.0" prefHeight="26.0" prefWidth="130.0" />
+            <Text layoutX="16.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Model :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtModel" layoutX="92.0" layoutY="138.0" prefHeight="26.0" prefWidth="130.0" />
+            <Text layoutX="16.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtYear" layoutX="92.0" layoutY="172.0" prefHeight="26.0" prefWidth="130.0" />
+            <Text layoutX="16.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rate :" wrappingWidth="75.73675537109375" />
+            <TextField fx:id="txtRate" layoutX="92.0" layoutY="206.0" prefHeight="26.0" prefWidth="130.0" />
+            <Button layoutX="138.0" layoutY="323.0" mnemonicParsing="false" onAction="#btnCarsClearOnAction" prefHeight="26.0" prefWidth="76.0" text="Clear" />
+            <Button layoutX="138.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnCarsSaveOnAction" prefHeight="26.0" prefWidth="76.0" text="Save" />
+            <Button layoutX="138.0" layoutY="401.0" mnemonicParsing="false" onAction="#btnCarsUpdateOnAction" prefHeight="26.0" prefWidth="76.0" text="Update" />
+            <Button layoutX="138.0" layoutY="440.0" mnemonicParsing="false" onAction="#btnCarsDeleteOnAction" prefHeight="26.0" prefWidth="76.0" text="Delete" />
+            <ComboBox fx:id="cmbCategory" layoutX="17.0" layoutY="279.0" prefHeight="24.0" prefWidth="204.0" promptText="Select Category" />
+            <Label layoutX="17.0" layoutY="249.0" text="Availability" />
+            <RadioButton fx:id="rBtnAvailable" layoutX="117.0" layoutY="249.0" mnemonicParsing="false" selected="true" text="yes">
+               <toggleGroup>
+                  <ToggleGroup fx:id="availability" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rBtnNotAvailable" layoutX="180.0" layoutY="249.0" mnemonicParsing="false" text="no">
+               <toggleGroup>
+                  <ToggleGroup fx:id="availability" />
+               </toggleGroup>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
